@@ -81,6 +81,12 @@ class SWidget {
 
     }
 
+    /**
+     * Виджет рекламы для правого сайтбара
+     *
+     * @param $type
+     * @return \Illuminate\View\View
+     */
     public function adRightSidebar(){
 
 
