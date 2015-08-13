@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class OffersController extends Controller
 {
 
-    protected $titlePagination;    
+    protected $titlePagination;     
     protected $page; 
 
 
