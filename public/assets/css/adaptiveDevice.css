@@ -1,0 +1,59 @@
+@media (max-width: 768px){ /* для телефонов и планшетов до 768 */
+    #searchSite {
+        width: 100%;
+    }
+    #searchSiteForm{
+        float: none;
+    }
+    #searchSiteButton{
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+    #city{
+        float: none;
+        margin: 0 0 5px 0;
+        text-align: center;
+    }
+    .tesst {
+        display: block;
+        margin: 5px 0 0 0;
+        float: none;
+    }
+    .serviceOfferSiteBox img{
+        max-width: 70px!important;
+    }
+    .serviceOfferSiteBox p{
+       font-size: 15px!important;
+    }
+    .calcCreditBox .form-group input{
+        width:250px;
+        font-size:11px;
+        margin: 0 0 0 10px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 992px){ /* не меньше 992 но и не больше 1200*/
+    #searchSite {
+        width: 100%;
+    }
+    #searchSiteForm{
+        float: none;
+    }
+    #searchSiteButton{
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+    #city{
+        float: none;
+        margin: 0 0 5px 0;
+        text-align: center;
+    }
+    .form-group{
+        display: inline!important;
+    }
+    body{
+        padding: 0 0 0 240px;
+    }
+    .navmenu-fixed-left {
+        left: 0;
+    }
+}
