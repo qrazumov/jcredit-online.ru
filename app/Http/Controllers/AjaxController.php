@@ -27,7 +27,7 @@ class AjaxController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'item' => 'required|string|max:255',
+            'item' => 'required|string|max:255', 
         ]);
 
         if ($validator->fails()) {
