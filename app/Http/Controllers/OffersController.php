@@ -239,7 +239,7 @@ class OffersController extends Controller
 
                 // костыль, если битый адрес
 
-                if($i == $count - 1){
+                if($i == $count){
                     abort(404);
                 }
 
