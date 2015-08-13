@@ -76,6 +76,7 @@ class PromoController extends Controller
 
     /**
      * Отображает сраницу редиректа на рекламную ссылку
+	 * тест
      *
      * @param $id
      * @param $type
