@@ -93,6 +93,12 @@ class SWidget {
 
     }
 
+    /**
+     * Виджет офферов для правого сайтбара
+     *
+     * @param $type
+     * @return \Illuminate\View\View
+     */
     public function offerRSidebar(){
 
         $offers = [];
