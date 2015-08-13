@@ -16,7 +16,7 @@ class OffersController extends Controller
     protected $page; 
 
 
-    /**
+    /** 
      * Вернет тип урла и таблицу для кредитных
      * предложений
      *
