@@ -13,7 +13,7 @@ class OffersController extends Controller
 {
 
     protected $titlePagination;
-    protected $page;
+    protected $page; 
 
 
     /**
