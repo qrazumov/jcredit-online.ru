@@ -103,6 +103,7 @@ Route::group(['as' => 'admin::'], function () {
     Route::get('admin/new/list', ['as' => 'listNew', 'uses' => 'AdminController@listNew']);
     Route::get('admin/new/edit/{id}', ['as' => 'editNew', 'uses' => 'AdminController@editNew']);
 
-    Route::get('admin/category', ['as' => 'category', 'uses' => 'AdminController@category']);
+    Route::get('admin/category', ['as' => 'category', 'uses' => 'AdminController@category']);    
+	
 
 });
