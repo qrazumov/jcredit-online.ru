@@ -25,7 +25,7 @@ class OffersController extends Controller
      */
     protected function getTitleAndTable($category){
 
-        // соответствие url'у и таблице
+        // соответствие url'у и таблице 
         $complianceArray = [
             'nal' => ['offers_nal', 'Кредиты наличными'],
             'cart' => ['offers_card', 'Кредитные карты'],
