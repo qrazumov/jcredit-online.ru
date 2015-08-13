@@ -69,6 +69,12 @@ class SWidget {
 
     }
 
+    /**
+     * Виджет рекламы для низа контента
+     *
+     * @param $type
+     * @return \Illuminate\View\View
+     */
     public function adBottomContent(){
 
 
