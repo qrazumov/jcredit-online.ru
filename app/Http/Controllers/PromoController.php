@@ -40,7 +40,7 @@ class PromoController extends Controller
     }
 
     /**
-     * Отображение промо страницы с микрозаймами
+     * Отображение промо страницы с микрозаймами + слово
      *
      * @param DescriptionCategory $descriptionCategory
      * @return \Illuminate\View\View
