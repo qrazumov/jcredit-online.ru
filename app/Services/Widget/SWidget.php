@@ -169,6 +169,8 @@ class SWidget {
 
     }
 
+    public function testMethod(){}
+
 
 
 
