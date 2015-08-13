@@ -237,7 +237,7 @@ class OffersController extends Controller
 
                 $i = $i + 1;
 
-                // костыль, если битый адрес
+                // костыль, если битый адрес --git
 
                 if($i == $count){
                     abort(404);
