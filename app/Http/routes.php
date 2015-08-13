@@ -92,8 +92,8 @@ Route::group(['as' => 'new::'], function () {
     Route::get('news/cat/{id}', ['as' => 'categoryId', 'uses' => 'NewController@categoryId'])->where(['id' => '^[0-9]{1,3}$']);
     Route::get('news/{url}', ['as' => 'new', 'uses' => 'NewController@_new'])->where(['url' => '[\w-_]{1,255}']); // спорно
 });
-// группа admin
-Route::group(['as' => 'admin::'], function () {
+// группа admin | на все роуты группы - только залогиненные юзеры
+Route::group(['as' => 'admin::', 'middleware' => 'auth'], function () {
     Route::get('admin', ['as' => 'index', 'uses' => 'AdminController@index']);
     Route::get('admin/article/add', ['as' => 'addArticle', 'uses' => 'AdminController@addArticle']);
     Route::get('admin/article/list', ['as' => 'listArticle', 'uses' => 'AdminController@listArticle']);
@@ -104,6 +104,16 @@ Route::group(['as' => 'admin::'], function () {
     Route::get('admin/new/edit/{id}', ['as' => 'editNew', 'uses' => 'AdminController@editNew']);
 
     Route::get('admin/category', ['as' => 'category', 'uses' => 'AdminController@category']);    
-	
+
+
 
 });
+
+// Authentication routes...
+Route::get('login', ['as' => 'login', 'uses' => 'AdminController@getLogin']);
+Route::post('login',['as' => 'loginPost', 'uses' => 'Auth\AuthController@postLogin']);
+Route::get('auth/logout',['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
+
+// Роуты регистрации. Раскомментировать, если нужно добавить нового юзера
+//Route::get('register', ['as' => 'registerGet', 'uses' => 'AdminController@getRegister']);
+//Route::post('auth/register',['as' => 'registerPost', 'uses' => 'Auth\AuthController@postRegister']);
