@@ -8,7 +8,7 @@
  */
 
 namespace {
-    exit("This file should not be included, only analyzed by your IDE");
+    exit("This file should not be included, only analyzed by your IDE"); 
 
     class App extends \Illuminate\Support\Facades\App{
         
