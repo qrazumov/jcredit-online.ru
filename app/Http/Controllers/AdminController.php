@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -10,8 +11,9 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller
 {
 
-    public function index(){
 
+
+    public function index(){
 
 
         return view('admin.index', [
@@ -179,6 +181,31 @@ class AdminController extends Controller
         return view('admin.category', [
 
             'data' => $data,
+
+        ]);
+
+    }
+
+    public function getLogin(){
+
+
+
+
+        return view('auth.login', [
+
+
+
+        ]);
+
+    }
+
+    public function getRegister(){
+
+
+
+        return view('auth.register', [
+
+
 
         ]);
 
