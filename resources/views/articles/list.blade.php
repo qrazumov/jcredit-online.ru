@@ -25,7 +25,7 @@
 
 @section('content')
 
-         <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+         <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
             <blockquote>
                 <h1 class="h1_23">{{ $title }}</h1>
             </blockquote>

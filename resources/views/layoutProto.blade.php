@@ -286,7 +286,7 @@
         </div><!-- Шапка-->
     @yield('breadcrumb')
     {{--visible-md visible-lg МОЖЕТ БЫТЬ ЕСЛИ НУЖНО ПО ПРАВИЛАМ GOOGLE  --}}
-    <div class="col-lg-4 col-md-4" id=""><!-- Правый сайтбар -->
+    <div class="col-lg-4 col-md-4 visible-md visible-lg visible-sm" id=""><!-- Правый сайтбар -->
         <div class="row">
             @yield('rightSidebar')
         </div>

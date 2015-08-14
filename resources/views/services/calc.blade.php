@@ -24,7 +24,7 @@
 
 @section('content')
 
-         <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+         <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
             <h1>Рассчитать кредит онлайн и переплату по кредиту</h1>
             <div class="post table-responsive">
             <div class="calcCreditBox"><!-- Форма ввода данных -->

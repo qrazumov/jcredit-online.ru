@@ -25,7 +25,7 @@
 @endsection
 
 @section('content')
-    <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+    <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
         {!! SWidget::adTopContent() !!}
         @if(count($data) != 0)
         <h1>{{ $data->title }}</h1>

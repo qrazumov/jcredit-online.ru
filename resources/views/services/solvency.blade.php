@@ -24,7 +24,7 @@
 
 @section('content')
 
-         <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+         <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
             <h1>Проверить свою кредитоспособность онлайн</h1>
             <blockquote>Сервис временно недоступен. Приносим извенения за неудобства</blockquote>
             <div class="col-lg-12 col-md-12 offerText justifyText bgSiteBox"><!-- Описание категории -->

@@ -24,7 +24,7 @@
 
 @section('content')
 
-            <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+            <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
                 <h1>Словарь банковских терминов</h1>
                 @if(!isset($isLetter))
 

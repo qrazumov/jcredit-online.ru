@@ -26,7 +26,7 @@
 
 @section('content')
 
-    <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+    <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
 
             @if($data->widget_type == 'ads')
                 {!! SWidget::adTopContent() !!}

@@ -24,7 +24,7 @@
 
 @section('content')
 
-         <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+         <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
             @if(isset($categoryTitle))
                 <h1>Финансовые новости России: {{ $categoryTitle }}</h1>
             @else

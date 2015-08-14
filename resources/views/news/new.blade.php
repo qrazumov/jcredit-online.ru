@@ -26,7 +26,7 @@
 
 @section('content')
 
-    <div class="col-lg-8 col-md-12"><!-- Центральный контент -->
+    <div class="col-lg-8 col-md-8"><!-- Центральный контент -->
         {!! SWidget::adTopContent() !!}
         <h1>{{ $data->title }}</h1>
         <p><small><span class="glyphicon glyphicon-calendar"></span> {{ date('d m Y', strtotime($data->created_at)) }} </small><small style="margin: 0 0 0 10px;"><span class="glyphicon glyphicon-eye-open"></span> {{ $data->views }}</small></p>
