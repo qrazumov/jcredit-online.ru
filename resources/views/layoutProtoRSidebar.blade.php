@@ -239,7 +239,7 @@
                     </tbody>
                 </table>
             </div><!-- Таблица курсов валют -->
-            <div class="col-lg-2 col-sm-6 col-md-4 col-sm-12 visible-xs visible-sm visible-md visible-lg"><!-- Калькулятор и тест -->
+            <div class="col-lg-3 col-sm-6 col-md-4 col-sm-12 visible-xs visible-sm visible-md visible-lg"><!-- Калькулятор и тест -->
                 <table class="table table-header-test-calc">
                     <tr>
                         <td>
@@ -261,7 +261,7 @@
                     </tr>
                 </table>
             </div><!-- Калькулятор и тест -->
-            <div class="col-lg-5 col-sm-6 col-md-3 col-sm-12 visible-xs visible-md visible-lg"><!-- Город и поиск -->
+            <div class="col-lg-4 col-sm-6 col-md-3 col-sm-12 visible-xs visible-md visible-lg"><!-- Город и поиск -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="city">
