@@ -111,17 +111,13 @@
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <h3>Статьи по кредитам</h3>
-                        <p><a href="/info/mikrozaim_na_kartu_za_5_minut_bez_proverki_kreditnoi_istorii/">Микрозаймы на карту за 5 минут без проверки кредитной истории</a>
-                        <p><a href="/info/gde_vzyat_mikrozaim_onlain_bistro/">Где взять микрозайм онлайн быстро</a>
-                        <p><a href="/info/mikrozaim_po_pasportu_onlain/">Микрозайм по паспорту онлайн</a>
-                        <p><a href="/info/mikrozaim_onlain_na_kivi_koshelek/">Микрозайм онлайн на киви кошелек</a>
-                        <p><a href="/info/dogovor_mikrozaima_obrazec_2015/">Договор микрозайма образец 2015</a>
-                        <p><a href="/info/bistrie_dengi_zaim/">Быстрые деньги займ</a>
-                        <p><a href="/info/bistrie_dengi_onlain/">Быстрые деньги онлайн</a>
-                        <p><a href="/info/bank_bistro_dengi/">Банк быстро деньги</a>
-                        <p><a href="/info/kak_poluchit_bistrie_dengi_na_vigodnih_usloviyah/">Как получить быстрые деньги на выгодных условиях?</a>
-                        <p><a href="/info/vozmojno_li_poluchit_mikrozaim_s_18_let/">Возможно ли получить микрозайм с 18 лет?</a>
-
+                        @if(count($categorySidebarData) != 0)
+                            @foreach($categorySidebarData as $v)
+                                <p><a href="{{ route('article::index') }}/{{ $v->url }}">{{ $v->title }}</a>
+                            @endforeach
+                        @else
+                            <blockquote>Данные недоступны</blockquote>
+                        @endif
                     </div>
                 </div>
             </div><!-- <Блок описания категории и сайтбар -->

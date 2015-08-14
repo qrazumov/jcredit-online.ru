@@ -29,11 +29,14 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_nal')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 4)->orderBy('id', 'desc')->take(10)->get();
+
         return view('promo.nal', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -57,6 +60,9 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_micro')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 5)->orderBy('id', 'desc')->take(10)->get();
+
+
 
         foreach ($data as $d) {
             // добавляем метод снятия денег
@@ -68,6 +74,7 @@ class PromoController extends Controller
             'descriptionCategory' => $descriptionCategory,
             'data' => $data,
             'meta' => $meta,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -141,11 +148,15 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_card')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 2)->orderBy('id', 'desc')->take(10)->get();
+
+
         return view('promo.card', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -169,11 +180,15 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_mort')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 3)->orderBy('id', 'desc')->take(10)->get();
+
+
         return view('promo.mort', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -197,11 +212,15 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_auto')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 1)->orderBy('id', 'desc')->take(10)->get();
+
+
         return view('promo.auto', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -225,11 +244,15 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_hold')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 7)->orderBy('id', 'desc')->take(10)->get();
+
+
         return view('promo.hold', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
@@ -253,11 +276,15 @@ class PromoController extends Controller
         // получаем те офферы, которые опубликованы
         $data = \DB::table('offers_biz')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->get();
 
+        $categorySidebarData = \DB::table('info')->where('publish', 1)->where('category_id', 6)->orderBy('id', 'desc')->take(10)->get();
+
+
         return view('promo.business', [
 
             'descriptionCategory' => $descriptionCategory,
             'meta' => $meta,
             'data' => $data,
+            'categorySidebarData' => $categorySidebarData,
 
         ]);
 
