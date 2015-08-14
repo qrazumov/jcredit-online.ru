@@ -276,8 +276,12 @@
                         <form class="form-inline" role="form" id="searchSiteForm">
                             <div class="form-group">
                                 <!--<label for="exampleInputEmail1">Email</label>-->
-                                <input class="form-control " id="searchSite" placeholder="Поиск по сайту">
-                                <button type="submit" class="btn btn-default btn btn-info btn-block btn-sm " id="searchSiteButton">Найти</button>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'http://jcredit-online.ru/search','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Yandex Site Search #2196832','suggest':true,'target':'_self','tld':'ru','type':2,'usebigdictionary':true,'searchid':2196832,'webopt':false,'websearch':false,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'Введите поисковый запрос','input_placeholderColor':'#999999','input_borderColor':'#7f9db9'}"><form action="http://yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="2196832"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+
+
+                                {{--<input class="form-control " id="searchSite" placeholder="Поиск по сайту">--}}
+                                {{--<button type="submit" class="btn btn-default btn btn-info btn-block btn-sm " id="searchSiteButton">Найти</button>--}}
                             </div>
                         </form>
                     </div>

@@ -37,6 +37,10 @@ Route::group(['as' => 'ajax::'], function () {
 Route::get('/', [
     'as' => 'index', 'uses' => 'IndexController@index'
 ]);
+// search
+Route::get('search', [
+    'as' => 'search', 'uses' => 'IndexController@search'
+]);
 // калькулятор
 Route::get('kreditnyi_kalkulyator', [
     'as' => 'calc', 'uses' => 'IndexController@calc'

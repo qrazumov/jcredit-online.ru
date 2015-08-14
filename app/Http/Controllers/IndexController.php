@@ -144,4 +144,11 @@ class IndexController extends Controller
         ]);
 
     }
+
+    public function search(){
+
+
+        return view('services.search', []);
+
+    }
 }
