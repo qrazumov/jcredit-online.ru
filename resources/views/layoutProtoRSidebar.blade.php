@@ -316,7 +316,7 @@
     <script type="text/javascript" src="{{ url() }}/assets/js/promo/promo.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/plugin/jquery.hc-sticky.min.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/scrollSidebar.js"></script>
-
+    <script type="text/javascript" src="{{ url() }}/assets/js/searchStyle.js"></script>
     @yield('js')
 </body>
 </html>
