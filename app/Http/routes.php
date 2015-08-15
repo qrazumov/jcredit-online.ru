@@ -59,6 +59,16 @@ Route::group(['as' => 'dictionary::'], function () {
     Route::get('dictionary/{let}', ['as' => 'letter', 'uses' => 'DictionaryController@letter']);
 
 });
+// группа блоки рекламы офферов в статьях
+Route::group(['as' => 'adsInArticle::'], function () {
+    Route::get('ads/nal', ['as' => 'nal', 'uses' => 'AdsInArticleController@nal']);
+    Route::get('ads/card', ['as' => 'card', 'uses' => 'AdsInArticleController@card']);
+    Route::get('ads/micro', ['as' => 'micro', 'uses' => 'AdsInArticleController@micro']);
+    Route::get('ads/hold', ['as' => 'hold', 'uses' => 'AdsInArticleController@hold']);
+    Route::get('ads/auto', ['as' => 'auto', 'uses' => 'AdsInArticleController@auto']);
+    Route::get('ads/mort', ['as' => 'mort', 'uses' => 'AdsInArticleController@mort']);
+    Route::get('ads/biz', ['as' => 'biz', 'uses' => 'AdsInArticleController@biz']);
+});
 // группа banks
 Route::group(['as' => 'banks::'], function () {
     Route::get('banks', ['as' => 'index', 'uses' => 'BanksController@index']);

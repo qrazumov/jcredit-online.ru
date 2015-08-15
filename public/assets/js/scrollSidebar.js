@@ -50,7 +50,7 @@
        offResolutions: [-992]
     });
 
-$('#topSidebar').hcSticky({
+$('.adsBlockInfo').hcSticky({
     top: 0,
     //innerTop: 50,
     //stickTo: document,

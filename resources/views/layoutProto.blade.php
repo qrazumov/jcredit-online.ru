@@ -299,6 +299,15 @@
 
         @yield('content')
 
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+            </div>
+          </div>
+        </div>
+
 
     </div>
 </div><!-- Контент -->
@@ -318,6 +327,7 @@
     <script type="text/javascript" src="{{ url() }}/assets/js/plugin/jquery.hc-sticky.min.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/scrollSidebar.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/searchStyle.js"></script>
+    <script type="text/javascript" src="{{ url() }}/assets/js/adsBlockInfo.js"></script>
 
     @yield('js')
 </body>
