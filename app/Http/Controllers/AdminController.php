@@ -80,11 +80,34 @@ class AdminController extends Controller
 
         $data = \DB::table('info')->where('id', $id)->get()[0];
 
+        $seeAlso = json_decode(\DB::table('info')->where('publish', '1')->where('id', $id)->select('see_also')->get()[0]->see_also);
+
+
         foreach ($category as $v) {
 
-            $allArticle[$v->title] = \DB::table('info')->select('id', 'title')->where('publish', '1')->where('category_id', $v->id)->get();
+            
+                $allArticle[$v->title] = \DB::table('info')->select('id', 'title')->where('publish', '1')->where('category_id', $v->id)->get();
 
         }
+        
+
+        foreach ($allArticle as $key => $value) {
+            
+            foreach ($value as $k => $v) {
+                
+                if ($v->id == $seeAlso[0] || $v->id == $seeAlso[1] || $v->id == $seeAlso[2]) {
+
+                    $v->selected = 'selected';
+
+                } else{
+                     $v->selected = '';
+                }
+
+            }
+
+        }
+
+            // dd($allArticle);    
 
 
         return view('admin.article.edit', [
