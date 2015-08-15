@@ -97,7 +97,7 @@ class AjaxController extends Controller
         return response()->json(['error' => true, 'reason' => 'Выбрано не 3 релевантных статьи']);
     }
 
-    $title = $request->get('title');
+    $title = trim($request->get('title'));
 
     // изображение статьи
     $img = $request->file('InputImage');
@@ -151,7 +151,7 @@ class AjaxController extends Controller
     try{
         $query = Article::create([
             'text' => $request->get('editorArticle'),
-            'title' => $request->get('title'),
+            'title' => $title,
             'description' => $request->get('description'),
             'keywords' => $request->get('keywords'),
             'category_id' => $request->get('categoryId'),
@@ -177,9 +177,18 @@ class AjaxController extends Controller
 
         $id = $request->get('id');
 
+        $imgName = \DB::table('info')->where('id', $id)->select('pic_preview')->get()[0]->pic_preview;
+
+        $mapImg = '../resources/images/articles/article/' . $imgName;
+
+
+
         try{
 
             $delete = \DB::table('info')->delete($id);
+
+            // удаляем картинку
+            unlink($mapImg);            
 
         }catch(\Exception $e){
 
@@ -216,7 +225,7 @@ class AjaxController extends Controller
             return response()->json(['error' => true, 'reason' => 'Выбрано не 3 релевантных статьи']);
         }
 
-        $title = $request->get('title');
+        $title = trim($request->get('title'));
 
         $id = $request->get('id');
 
@@ -240,7 +249,7 @@ class AjaxController extends Controller
             try{
                 $query = Article::where('id', $id)->update([
                     'text' => $request->get('editorArticle'),
-                    'title' => $request->get('title'),
+                    'title' => $title,
                     'description' => $request->get('description'),
                     'keywords' => $request->get('keywords'),
                     'category_id' => $request->get('categoryId'),
@@ -290,7 +299,7 @@ class AjaxController extends Controller
             try{
                 $query = Article::where('id', $id)->update([
                     'text' => $request->get('editorArticle'),
-                    'title' => $request->get('title'),
+                    'title' => $title,
                     'description' => $request->get('description'),
                     'keywords' => $request->get('keywords'),
                     'category_id' => $request->get('categoryId'),
@@ -339,7 +348,7 @@ class AjaxController extends Controller
             return response()->json(['error' => true, 'reason' => 'Выбрано не 3 релевантных новости']);
         }
 
-        $title = $request->get('title');
+        $title = trim($request->get('title'));
 
         // изображение статьи
         $img = $request->file('InputImage');
@@ -391,7 +400,7 @@ class AjaxController extends Controller
         try{
             $query = _New::create([
                 'text' => $request->get('editorArticle'),
-                'title' => $request->get('title'),
+                'title' => $title,
                 'category_id' => $request->get('categoryId'),
                 'pic_preview' => $imgName,
                 'views' => $views,
@@ -414,9 +423,16 @@ class AjaxController extends Controller
 
         $id = $request->get('id');
 
+        $imgName = \DB::table('news')->where('id', $id)->select('pic_preview')->get()[0]->pic_preview;
+
+        $mapImg = '../resources/images/news/new/' . $imgName;        
+
         try{
 
             $delete = \DB::table('news')->delete($id);
+
+            // удаляем картинку
+            unlink($mapImg);             
 
         }catch(\Exception $e){
 
@@ -450,7 +466,7 @@ class AjaxController extends Controller
             return response()->json(['error' => true, 'reason' => 'Выбрано не 3 релевантных новости']);
         }
 
-        $title = $request->get('title');
+        $title = trim($request->get('title'));
 
         $id = $request->get('id');
 
@@ -472,7 +488,7 @@ class AjaxController extends Controller
             try{
                 $query = _New::where('id', $id)->update([
                     'text' => $request->get('editorArticle'),
-                    'title' => $request->get('title'),
+                    'title' => $title,
                     'category_id' => $request->get('categoryId'),
                     'views' => $views,
                     'url' => $url,
@@ -519,7 +535,7 @@ class AjaxController extends Controller
             try{
                 $query = _New::where('id', $id)->update([
                     'text' => $request->get('editorArticle'),
-                    'title' => $request->get('title'),
+                    'title' => $title,
                     'category_id' => $request->get('categoryId'),
                     'pic_preview' => $imgName,
                     'views' => $views,
@@ -558,7 +574,7 @@ class AjaxController extends Controller
         // попытка добавить данные
         try{
             $query = Category::create([
-                'title' => $request->get('title'),
+                'title' => trim($request->get('title')),
                 'type' => $request->get('type'),
             ]);
 
