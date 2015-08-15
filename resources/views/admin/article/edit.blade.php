@@ -155,7 +155,11 @@
                               @foreach($allArticle as $k => $v)
                                 <option disabled class="text-aqua">{{ $k }}</option>
                                 @foreach($v as $value)
+                                  @if($value->selected == 'selected')
+                                    <option value="{{ $value->id }}" selected="selected">{{ $value->title }}</option>
+                                  @else
                                     <option value="{{ $value->id }}">{{ $value->title }}</option>
+                                  @endif
                                 @endforeach
                               @endforeach
                             @else
