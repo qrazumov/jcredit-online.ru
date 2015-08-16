@@ -6,7 +6,7 @@
 
     var blockLink = $('.adsBlockInfo a');
 
-    blockLink.mouseover(function(e){
+    blockLink.click(function(e){
 
         e.preventDefault();
 

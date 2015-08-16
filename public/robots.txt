@@ -1,2 +1,20 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /login
+Disallow: /dictionary/*
+Disallow: /ads
+Disallow: /ads/*
+
+Disallow: /*?*
+
+User-agent: googlebot
+Disallow: /admin
+Disallow: /login
+Disallow: /dictionary/let/
+Disallow: /banks/let/
+Disallow: /cgi-bin
+Disallow: /core
+Disallow: /lib
+Disallow: /*?*
+
+Host: jcredit-online.ru

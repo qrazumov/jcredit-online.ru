@@ -245,6 +245,51 @@
 
                     var data = CKEDITOR.instances.editorArticle.getData();
 
+                    function showResponse(responseText, statusText, xhr, $form)  {
+                        // for normal html responses, the first argument to the success callback
+                        // is the XMLHttpRequest object's responseText property
+
+                        // if the ajaxSubmit method was passed an Options Object with the dataType
+                        // property set to 'xml' then the first argument to the success callback
+                        // is the XMLHttpRequest object's responseXML property
+
+                        // if the ajaxSubmit method was passed an Options Object with the dataType
+                        // property set to 'json' then the first argument to the success callback
+                        // is the json data object returned by the server
+
+                        if(actionType == 'publish'){
+                         // если были какие-то ошибки на стороне сервера
+                         if(responseText.error == true){
+                             console.log(responseText);
+                             $('#appendAllert').prepend('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Ошибка добавления статьи! Причина: '+ responseText.reason[0].toString() +'</div>');
+                            var publishAction = $("#publishAction");
+                            publishAction.html('Опубликовать');
+                             return;
+                         }
+
+                         stopLoadingAnimation(e);
+                         $('#appendAllert').prepend('<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Новость успешно опубликована! <a href="{{ route('new::index') }}/'+ responseText.url +'" target="_blank">Просмотреть</a>, <a href="{{ url() }}/admin/new/edit/'+ responseText.id +'" target="_blank">редактировать</a>, <a href="{{ route('admin::addNew') }}" target="_blank">добавить новую</a></div>');
+                        // alert(responseText.id);
+                         console.log(responseText);
+                        }else{
+                         // если были какие-то ошибки на стороне сервера
+                         if(responseText.error == true){
+                             console.log(responseText);
+                             $('#appendAllert').prepend('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Ошибка добавления статьи! Причина: '+ responseText.reason[0].toString() +'</div>');
+                            var publishAction = $("#publishAction");
+                            publishAction.html('Опубликовать');
+                             return;
+                         }
+
+                         stopLoadingAnimation(e);
+                         $('#appendAllert').prepend('<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Новость добавлена в черновик! <a href="{{ url() }}/admin/new/edit/'+ responseText.id +'" target="_blank">Редактировать</a>, <a href="{{ route('admin::addNew') }}" target="_blank">добавить новую</a></div>');
+                        // alert(responseText.id);
+                         console.log(responseText);
+                        }
+
+
+                    }                    
+
                     // если действие - опубликовать, то publish=1, иначе 0
                     if(actionType == 'publish'){
                     var options = {
@@ -289,51 +334,6 @@
                         //timeout:   3000
                     };                    }
 
-
-                    function showResponse(responseText, statusText, xhr, $form)  {
-                        // for normal html responses, the first argument to the success callback
-                        // is the XMLHttpRequest object's responseText property
-
-                        // if the ajaxSubmit method was passed an Options Object with the dataType
-                        // property set to 'xml' then the first argument to the success callback
-                        // is the XMLHttpRequest object's responseXML property
-
-                        // if the ajaxSubmit method was passed an Options Object with the dataType
-                        // property set to 'json' then the first argument to the success callback
-                        // is the json data object returned by the server
-
-                        if(actionType == 'publish'){
-                         // если были какие-то ошибки на стороне сервера
-                         if(responseText.error == true){
-                             console.log(responseText);
-                             $('#appendAllert').prepend('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Ошибка добавления статьи! Причина: '+ responseText.reason[0].toString() +'</div>');
-                            var publishAction = $("#publishAction");
-                            publishAction.html('Опубликовать');
-                             return;
-                         }
-
-                         stopLoadingAnimation(e);
-                         $('#appendAllert').prepend('<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Новость успешно опубликована! <a href="{{ route('new::index') }}/'+ responseText.url +'" target="_blank">Просмотреть</a>, <a href="{{ url() }}/admin/new/edit/'+ responseText.id +'" target="_blank">редактировать</a>, <a href="{{ route('admin::addNew') }}" target="_blank">добавить новую</a></div>');
-                        // alert(responseText.id);
-                         console.log(responseText);
-                        }else{
-                         // если были какие-то ошибки на стороне сервера
-                         if(responseText.error == true){
-                             console.log(responseText);
-                             $('#appendAllert').prepend('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Ошибка добавления статьи! Причина: '+ responseText.reason[0].toString() +'</div>');
-                            var publishAction = $("#publishAction");
-                            publishAction.html('Опубликовать');
-                             return;
-                         }
-
-                         stopLoadingAnimation(e);
-                         $('#appendAllert').prepend('<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-check"></i> Оповещение!</h4>Новость добавлена в черновик! <a href="{{ url() }}/admin/new/edit/'+ responseText.id +'" target="_blank">Редактировать</a>, <a href="{{ route('admin::addNew') }}" target="_blank">добавить новую</a></div>');
-                        // alert(responseText.id);
-                         console.log(responseText);
-                        }
-
-
-                    }
 
                     // сам запрос
                     $('#AddArticle').ajaxSubmit(options);
