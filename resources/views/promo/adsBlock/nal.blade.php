@@ -44,7 +44,7 @@
 			                                    <p class="lead"><strong>{{ $v->percent_approvals}} %</strong></p>
 			                                </td>
 			                                <td>
-			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank" class="btn btn-default btn btn-info btn-block btn-lg btnOffer">Оформить заявку</a>
+			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank" class="btn btn-default btn btn-success btn-block btn-lg btnOffer">Оформить заявку</a>
 			                                </td>
 			                            </tr>
 				                	@else
@@ -70,7 +70,7 @@
 			                                    <p class="lead"><strong>{{ $v->percent_approvals}} %</strong></p>
 			                                </td>
 			                                <td>
-			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank" class="btn btn-default btn btn-info btn-block btn-lg btnOffer">Оформить заявку</a>
+			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank" class="btn btn-default btn btn-success btn-block btn-lg btnOffer">Оформить заявку</a>
 			                                </td>
 			                            </tr>				                	
 				                	@endif                          

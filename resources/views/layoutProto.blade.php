@@ -253,10 +253,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="{{ route('calc') }}"><small>Калькулятор</small></a>
+                            <a href="{{ route('calc') }}"><small>Кредитный калькулятор</small></a>
                         </td>
                         <td>
-                            <a href="{{ route('solvency') }}"><small>Тест на кредитоспособность?</small></a>
+                            <a href="{{ route('solvency') }}"><small>Тест на кредитоспособность</small></a>
                         </td>
                     </tr>
                 </table>
