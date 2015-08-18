@@ -301,6 +301,9 @@
 
     </div>
 </div><!-- Контент -->
+
+<DIV ID ="toTop"><span class="glyphicon glyphicon-chevron-up"></span> <strong>Наверх</strong></DIV>
+
 <div id="footer"><!-- Футер -->
     <div class="container footerDiv">
         <p class="text-muted footerText">Реклама на сайте: <span class="label label-info" id="footerEmail">razumovsu@gmail.com</span><span class="tesst"><span class="glyphicon glyphicon-copyright-mark"></span> 2014-2015 jcredit-online.ru. Все права защищены</span></p>
@@ -317,6 +320,8 @@
     <script type="text/javascript" src="{{ url() }}/assets/js/plugin/jquery.hc-sticky.min.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/scrollSidebar.js"></script>
     <script type="text/javascript" src="{{ url() }}/assets/js/searchStyle.js"></script>
+    <script type="text/javascript" src="{{ url() }}/assets/js/features.js"></script>
+        
     @yield('js')
 </body>
 </html>
