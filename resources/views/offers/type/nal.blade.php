@@ -25,7 +25,7 @@
 
 @section('content')
 
-        <div class="col-lg-8 col-md-8 offerText"><!-- Центральный контент -->
+        <div class="col-lg-8 col-md-8 offerText main-content"><!-- Центральный контент -->
             <h1>Кредитные предложения банков в категории: Кредиты наличными</h1>
             @if(count($data))
                 @foreach($data as $v)

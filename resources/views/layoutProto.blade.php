@@ -300,7 +300,7 @@
         @yield('content')
 
         <!-- Modal -->
-        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:9999;">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
 

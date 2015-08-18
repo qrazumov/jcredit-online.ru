@@ -4,7 +4,7 @@
         <p><small>Нажмите на кноку "Оформить заявку", заполните простую заявку и получите деньги. Все очень быстро и просто</small></p>
     </blockquote>
     @if($offers['offers_nal'] != 0)
-    <table class="table widget-offers-table table-hover">
+    <table class="table widget-offers-table table-hover img-offers-block-info2">
         <thead>
             <tr class="widget-offers-table-head">
                 <th>
@@ -31,13 +31,14 @@
                     <tr style="border-left: 1px solid red;">
                         <td>
                             <span class="label label-info spec-offer-index-label" style="font-size: 14px;">JCredit-Online.ru рекомендует!</span>
-                            <a target="_blank" href="{{ url() }}/go/to/{{ $v->id }}/type/n"><img class="img-responsive img-thumbnail widget-offers-img" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+                            <p>{{ $v->title }}</p>
+                            <a target="_blank" href="{{ url() }}/go/to/{{ $v->id }}/type/n"><img class="img-responsive img-thumbnail widget-offers-img" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>
                         </td>
                         <td>
                             до {{ $v->sum_down }} руб.
                         </td>
                         <td>
-                            {{ $v->rate }} %
+                            {{ $v->rate_down }} %
                         </td>
                         <td>
                             <strong>{{ $v->number_issued }}</strong> человек
@@ -49,13 +50,14 @@
                 @else
                     <tr>
                         <td>
-                            <a href="{{ url() }}/go/to/{{ $v->id }}/type/n"><img class="img-responsive img-thumbnail widget-offers-img" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+                            <p>{{ $v->title }}</p>
+                            <a href="{{ url() }}/go/to/{{ $v->id }}/type/n"><img class="img-responsive img-thumbnail widget-offers-img" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>
                         </td>
                         <td>
                             до {{ $v->sum_down }} руб.
                         </td>
                         <td>
-                            {{ $v->rate }} %
+                            {{ $v->rate_down }} %
                         </td>
                         <td>
                             <strong>{{ $v->number_issued }}</strong> человек

@@ -23,8 +23,8 @@ class IndexController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_nal')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
-            ->select('offers_nal.*', 'banks.pic_bank')
+            //->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
+            //->select('offers_nal.*', 'banks.pic_bank')
             ->get();
 
         $articles = \DB::table('info')->where('publish', '1')->take(6)->orderBy('id', 'desc')->get();

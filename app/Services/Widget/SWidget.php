@@ -58,8 +58,8 @@ class SWidget {
         // получаем те офферы, которые опубликованы
 
         $offers['offers_nal'] = \DB::table('offers_nal')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->take(3)
-            ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
-            ->select('offers_nal.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
+            // ->select('offers_nal.*', 'banks.pic_bank')
             ->get();
 
         // получаем те офферы, которые опубликованы
@@ -124,14 +124,14 @@ class SWidget {
         // получаем те офферы, которые опубликованы
 
         $offers['offers_nal'] = \DB::table('offers_nal')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->take(5)
-            ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
-            ->select('offers_nal.*', 'banks.title')
+            // ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
+            // ->select('offers_nal.*', 'banks.title')
             ->get();
 
         // получаем те офферы, которые опубликованы
         $offers['offers_micro'] = \DB::table('offers_micro')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')->take(5)
-            ->join('banks', 'offers_micro.bank_id', '=', 'banks.id')
-            ->select('offers_micro.*', 'banks.title')
+            // ->join('banks', 'offers_micro.bank_id', '=', 'banks.id')
+            // ->select('offers_micro.*', 'banks.title')
             ->get();
 
         return view('widgets.rightSidebar.offers', [

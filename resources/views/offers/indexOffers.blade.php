@@ -23,7 +23,7 @@
 @endsection
 
 @section('content')
-        <div class="col-lg-8 col-md-8 offerText"><!-- Центральный контент -->
+        <div class="col-lg-8 col-md-8 offerText main-content"><!-- Центральный контент -->
             <h1>Кредитные предложения по категориям в помощь заемщику</h1>
 
             <div class="table-responsive"><!-- Таблица с категориями кредитных предложений -->

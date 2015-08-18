@@ -26,7 +26,7 @@
 
                     <div class="table-responsive">
                     @if(count($data) != 0)
-                        <table class="table table-hover table-striped topOffersIndex">
+                        <table class="table table-hover table-striped topOffersIndex img-offers-block-info">
                             <thead>
                             <tr>
                                 <th>Банк</th>
@@ -44,9 +44,9 @@
                                 <td>
                                     <span class="label label-info spec-offer-index-label" style="font-size: 17px; ">JCredit-Online.ru рекомендует!</span>
                                     <small><a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank">{{ $v->title  }}</a></small>
-                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>
                                 </td>
-                                <td>{{ $v->rate  }} %</td>
+                                <td>{{ $v->rate_down }} %</td>
                                 <td>{{ $v->sum_up  }} - {{ $v->sum_down  }} руб.</td>
                                 <td>{{ $v->term_up  }} - {{ $v->term_down  }} мес.</td>
                                 <td><span class="successPay">{{ $v->number_issued  }}</span></td>
@@ -56,9 +56,9 @@
                             <tr>
                                 <td>
                                     <small><a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank">{{ $v->title  }}</a></small>
-                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/n" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>    
                                 </td>
-                                <td>{{ $v->rate }} %</td>
+                                <td>{{ $v->rate_down }} %</td>
                                 <td>{{ $v->sum_up  }} - {{ $v->sum_down  }} руб.</td>
                                 <td>{{ $v->term_up  }} - {{ $v->term_down  }} мес.</td>
                                 <td><span class="successPay">{{ $v->number_issued  }}</span></td>

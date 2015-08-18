@@ -27,7 +27,7 @@
         </div>
     </div><!-- Информационный блок -->
 </div><!-- Информационный блок обертка -->
-        <div class="col-lg-12 col-md-12"><!-- блок контента -->
+        <div class="col-lg-12 col-md-12 main-content"><!-- блок контента -->
             @if(count($data))
             @foreach($data as $v)
                 @if($v->spec == 1)
@@ -101,7 +101,7 @@
 
             <div class="col-lg-12 col-md-12"><!-- <Блок описания категории и сайтбар -->
                 <div class="row offerText">
-                    <div class="col-lg-9 col-md-9">
+                    <div class="col-lg-9 col-md-9 bgSiteBox">
                         <h2>{{ $descriptionCategory->title }}</h2>
                         {!! $descriptionCategory->text !!}
                     </div>

@@ -25,7 +25,7 @@
 
 @section('content')
 
-    <div class="col-lg-8 col-md-8><!-- Центральный контент -->
+    <div class="col-lg-8 col-md-8 main-content"><!-- Центральный контент -->
         {!! SWidget::adTopContent() !!}
         <h1>{{ $bank->title }}</h1>
         <img src="{{ url() }}/../resources/images/banks/{{ $bank->pic_bank }}" alt="{{ $bank->title }}" class="img-thumbnail img-responsive imgPost">
