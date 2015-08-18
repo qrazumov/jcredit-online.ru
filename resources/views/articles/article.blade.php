@@ -36,10 +36,12 @@
             @endif
 
         <h1>{{ $data->title }}</h1>
-        <p><small><span class="glyphicon glyphicon-eye-open"></span> {{ $data->views }} просмотров</small></p>
+        <p><small><span class="glyphicon glyphicon-eye-open"></span> {{ $data->views }} просмотровс</small></p>
         <img src="{{ url() }}/../resources/images/articles/article/{{ $data->pic_preview }}" alt="{{ $data->title }}" class="img-thumbnail img-responsive imgPost">
             {!! $data->text !!}
             {!! SWidget::adBottomContent() !!}
+
+sdfgsdg
 
         <div class="bg-info seeAlsoDiv">
             <p class="lead seeAlso">Читайте также:</p>
