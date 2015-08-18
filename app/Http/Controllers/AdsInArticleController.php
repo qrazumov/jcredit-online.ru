@@ -20,8 +20,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_nal')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
-            ->select('offers_nal.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_nal.bank_id', '=', 'banks.id')
+            // ->select('offers_nal.*', 'banks.pic_bank')
             ->get();
 
 
@@ -38,8 +38,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_card')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_card.bank_id', '=', 'banks.id')
-            ->select('offers_card.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_card.bank_id', '=', 'banks.id')
+            // ->select('offers_card.*', 'banks.pic_bank')
             ->get();
 
 
@@ -56,8 +56,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_micro')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_micro.bank_id', '=', 'banks.id')
-            ->select('offers_micro.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_micro.bank_id', '=', 'banks.id')
+            // ->select('offers_micro.*', 'banks.pic_bank')
             ->get();
 
         foreach ($data as $d) {
@@ -79,8 +79,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_hold')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_hold.bank_id', '=', 'banks.id')
-            ->select('offers_hold.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_hold.bank_id', '=', 'banks.id')
+            // ->select('offers_hold.*', 'banks.pic_bank')
             ->get();
        
 
@@ -97,8 +97,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_auto')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_auto.bank_id', '=', 'banks.id')
-            ->select('offers_auto.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_auto.bank_id', '=', 'banks.id')
+            // ->select('offers_auto.*', 'banks.pic_bank')
             ->get();
        
 
@@ -115,8 +115,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_mort')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_mort.bank_id', '=', 'banks.id')
-            ->select('offers_mort.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_mort.bank_id', '=', 'banks.id')
+            // ->select('offers_mort.*', 'banks.pic_bank')
             ->get();
        
 
@@ -134,8 +134,8 @@ class AdsInArticleController extends Controller
 
         // получаем все данные для отображения
         $data = \DB::table('offers_biz')->where('publish_promo', '=', 1)->orderBy('priority', 'asc')
-            ->join('banks', 'offers_biz.bank_id', '=', 'banks.id')
-            ->select('offers_biz.*', 'banks.pic_bank')
+            // ->join('banks', 'offers_biz.bank_id', '=', 'banks.id')
+            // ->select('offers_biz.*', 'banks.pic_bank')
             ->get();
        
 

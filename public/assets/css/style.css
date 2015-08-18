@@ -763,3 +763,8 @@ ul.sposobList li.hold {
 #toTop:hover{
     background: rgba(139, 193, 187, 0.36);
 }
+.img-offers-block-info img{
+    
+    max-width: 150px;
+
+}

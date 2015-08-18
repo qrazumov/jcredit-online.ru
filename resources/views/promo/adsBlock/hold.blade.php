@@ -6,7 +6,7 @@
               <div class="modal-body">
  				@if(count($data))             
 				<div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover img-offers-block-info">
                             <thead>
                             <tr>
                             	<th>Банк</th>
@@ -23,8 +23,9 @@
 				                	@if($v->spec == '1') 
 			                            <tr class="spec-offer-index">
 			                                <td>
-                                    			<span class="label label-info spec-offer-index-label" style="font-size: 13px; ">JCredit-Online.ru рекомендует!</span>			                                
-			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/h" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+                                    			<span class="label label-info spec-offer-index-label" style="font-size: 13px; ">JCredit-Online.ru рекомендует!</span>	
+                                    			<small>{{ $v->title }}</small>		                                
+			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/h" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>
 			                                </td>                            
 			                                <td>
                                         		<p><small><span class="label label-info labelLarge">сумма от</span></small></p> <strong>{{ $v->sum_up }}</strong>
@@ -49,8 +50,9 @@
 			                            </tr>
 				                	@else
 			                            <tr>
-			                                <td>			                                
-			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/h" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/banks/{{ $v->pic_bank }}"></a>
+			                                <td>	
+			                                	<small>{{ $v->title }}</small>		                                
+			                                    <a href="{{ url() }}/go/to/{{ $v->id }}/type/h" target="_blank"><img class="img-responsive img-thumbnail" src="{{ url() }}/../resources/images/promo/{{ $v->img }}"></a>
 			                                </td>                            
 			                                <td>
                                         		<p><small><span class="label label-info labelLarge">сумма от</span></small></p> <strong>{{ $v->sum_up }}</strong>
