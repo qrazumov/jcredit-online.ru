@@ -835,3 +835,13 @@ ul.sposobList li.hold {
     font-weight: bold;
     border-radius: 5px;
 }
+.uptolike-buttons{
+    /*margin: 5px 0;*/
+}
+.share-alert{
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+.share-alert-offer{
+    margin: 0px 0px 10px;
+}
